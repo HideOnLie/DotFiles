@@ -1,2 +1,2 @@
 # DotFiles
-Dotfile Management
+Dotfile Management which use chezmoi.
