@@ -5,6 +5,10 @@
       path: vim/vimrc
     ~/.zshrc:
       path: zsh/zshrc
+    ~/.tmux.conf:
+      path: tmux/OhMyTmux/.tmux.conf
+    ~/.tmux.conf.local:
+      path: tmux/tmux.conf.local
     ~/.config/nvim:
       path: nvim
 
