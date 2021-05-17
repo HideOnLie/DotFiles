@@ -13,6 +13,9 @@ POWERLEVEL9K_INSTANT_PROMPT=off
 #export ALL_PROXY=$proxy;
 #export no_proxy="localhost, 127.0.0.1, ::1";
 
+export PATH=$HOME/Install/bin:$PATH
+export PATH=$HOME/Install/squashfs-root/usr/bin:$PATH
+
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
     print -P "%F{33}▓▒░ %F{220}Installing %F{33}DHARMA%F{220} Initiative Plugin Manager (%F{33}zdharma/zinit%F{220})…%f"
@@ -76,11 +79,11 @@ zstyle ':completion:*' menu select
 ### End of Zinit's installer chunk
 
 # === alias
-alias ls=exa
-alias la='exa -lgha'
-alias ll='exa -lgh'
-alias l='exa -lgha'
-alias lg='lazygit'
+alias ls='ls --color=auto'
+alias la='ls -a --color=auto'
+alias ll='ls -lha --color=auto'
+alias l='ls -lh --color=auto'
+#alias lg='lazygit'
 alias vi='nvim'
 alias vim='nvim'
 
@@ -131,3 +134,19 @@ fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/hide_liao/Package/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/hide_liao/Package/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/hide_liao/Package/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/hide_liao/Package/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
